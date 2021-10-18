@@ -1,0 +1,40 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class HomePage {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		//setup
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		
+		// Visit homepage
+		driver.get("http://automationpractice.com/index.php");
+		Thread.sleep(3000);
+		
+		//click Sign in button
+//		driver.findElement(By.xpath("//a[contains(text(),'Sign in')]")).click();
+		driver.findElement(By.linkText("Sign in")).click();
+		Thread.sleep(2000);
+		
+		//Provide email to register
+		driver.findElement(By.id("email_create")).sendKeys("meram56030@omibrown.com");
+		Thread.sleep(2000);
+		
+		//Click create account button
+		driver.findElement(By.id("SubmitCreate")).click();
+		Thread.sleep(2000);
+		
+		// Select Date of Birth
+		driver.findElement(By.id("days"))
+
+	}
+	
+}
