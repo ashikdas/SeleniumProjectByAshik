@@ -1,0 +1,23 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ContactUsPage {
+
+	public static void main(String[] args) throws Exception {
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		
+		// Visit homepage
+		driver.get("http://automationpractice.com");
+		Thread.sleep(3000);
+		
+		
+
+	}
+
+}

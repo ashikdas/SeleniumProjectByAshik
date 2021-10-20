@@ -1,0 +1,28 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class HomePage {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		//setup
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		
+		// Visit homepage
+		driver.get("http://automationpractice.com/index.php");
+		Thread.sleep(3000);
+		
+		
+		driver.quit();
+
+	}
+	
+}
