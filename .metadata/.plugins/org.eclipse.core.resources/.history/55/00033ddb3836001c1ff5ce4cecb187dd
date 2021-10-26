@@ -1,0 +1,42 @@
+package frameworkImplemention;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+public class AddToCardObject {
+	
+private static WebElement locator = null;
+	
+	public static WebElement product(WebDriver driver){
+		locator = driver.findElement(By.xpath("//body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[4]/div[1]/div[1]/div[1]/a[2]/span[1]"));
+		return locator;
+	}
+	
+	public static WebElement quantity(WebDriver driver){
+		locator = driver.findElement(By.xpath("//body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/form[1]/div[1]/div[2]/p[1]/a[2]/span[1]"));
+		return locator;
+	}
+	
+	public static Select size(WebDriver driver){
+		Select size = new Select(driver.findElement(By.id("group_1")));
+		return size;
+	}
+	
+	public static WebElement color(WebDriver driver){
+		locator = driver.findElement(By.id("color_8"));
+		return locator;
+	}
+	
+	public static WebElement addToCardButton(WebDriver driver){
+		locator = driver.findElement(By.id("add_to_cart"));
+		return locator;
+	}
+	
+	public static WebElement continueShoppingBtn(WebDriver driver){
+		locator = driver.findElement(By.cssSelector("body.product.product-2.product-blouse.category-7.category-blouses.hide-left-column.hide-right-column.lang_en:nth-child(2) div.header-container div.container div.row div.clearfix div.layer_cart_cart.col-xs-12.col-md-6 div.button-container:nth-child(5) span.continue.btn.btn-default.button.exclusive-medium > span:nth-child(1)"));
+		return locator;
+	}
+
+}

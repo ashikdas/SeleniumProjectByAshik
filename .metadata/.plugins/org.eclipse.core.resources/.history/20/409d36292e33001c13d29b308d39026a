@@ -1,0 +1,44 @@
+package frameworkImplemention;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class RegistrationPageTestwithTestNG {
+	static WebDriver driver = null;
+	
+	public static void Setup(){
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+	}
+	
+	public static void RegistrationTest() throws InterruptedException{
+		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+		Thread.sleep(3000);
+		
+		RegistrationPageObject.createAccount(driver).sendKeys("ashik@gmail.com");
+		Thread.sleep(2000);
+		
+		RegistrationPageObject.createAccountButton(driver).click();
+		Thread.sleep(3000);
+		
+		RegistrationPageObject.selectGender(driver).click();
+		
+		RegistrationPageObject.firstName(driver).sendKeys("Kabir");
+		
+		RegistrationPageObject.lastName(driver).sendKeys("Hasan");
+		
+		RegistrationPageObject.password(driver).sendKeys("12345");
+		
+		Select days = new Select(RegistrationPageObject.day(driver));
+		days.selectByValue("15");
+		
+		RegistrationPageObject.month(driver).selectByValue("8");
+		
+		RegistrationPageObject.year(driver).selectByValue("1996");
+	}
+
+}

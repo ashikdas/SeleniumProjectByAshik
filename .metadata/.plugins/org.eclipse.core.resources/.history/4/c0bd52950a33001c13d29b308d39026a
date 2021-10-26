@@ -1,0 +1,9 @@
+package frameworkImplemention;
+
+import org.openqa.selenium.WebElement;
+
+public class RegistrationPageObject {
+	
+	private static WebElement locator = null;
+
+}

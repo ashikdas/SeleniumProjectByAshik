@@ -1,0 +1,65 @@
+package frameworkImplemention;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class CheckOutTestwithTestNG {
+	
+	static WebDriver driver = null;
+	
+	@BeforeTest
+	public static void SetUp(){
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+	}
+	
+	@Test
+	public static void CheckOutTest() throws InterruptedException{
+			
+//		LoginPageTestwithTestNG.LoginTest();
+		
+		// Login Process
+		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+		
+		LoginPageObject.username(driver).sendKeys("meram56030@omibrown.com");
+		
+		LoginPageObject.password(driver).sendKeys("12345");
+		
+		LoginPageObject.signInButton(driver).click();
+		Thread.sleep(3000);
+		
+//		AddToCardTestwithTestNG.AddToCardTest();
+		
+		//Add To Card Process
+		driver.get("http://automationpractice.com/index.php");
+		Thread.sleep(3000);
+		
+		AddToCardObject.product(driver).click();
+		Thread.sleep(2000);
+		
+		AddToCardObject.quantity(driver).click();
+		Thread.sleep(2000);
+		
+		AddToCardObject.size(driver).selectByValue("2");
+		Thread.sleep(2000);
+		
+		AddToCardObject.color(driver).click();
+		
+		AddToCardObject.addToCardButton(driver).click();
+		Thread.sleep(10000);
+		
+		AddToCardObject.continueShoppingBtn(driver).click();
+		
+		driver.findElement(By.xpath("//body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[2]/div[4]/a[1]/span[1]")).click();
+		Thread.sleep(3000);
+			
+			
+	}
+
+}

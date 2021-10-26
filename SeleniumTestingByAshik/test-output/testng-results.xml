@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="74879" started-at="2021-10-26T16:49:48Z" finished-at="2021-10-26T16:51:03Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="74879" started-at="2021-10-26T16:49:48Z" finished-at="2021-10-26T16:51:03Z">
+      <class name="frameworkImplemention.CheckOutTestwithTestNG">
+        <test-method status="PASS" signature="SetUp()[pri:0, instance:frameworkImplemention.CheckOutTestwithTestNG@29ca901e]" name="SetUp" is-config="true" duration-ms="5209" started-at="2021-10-26T22:49:48Z" finished-at="2021-10-26T22:49:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="PASS" signature="CheckOutTest()[pri:0, instance:frameworkImplemention.CheckOutTestwithTestNG@29ca901e]" name="CheckOutTest" duration-ms="69637" started-at="2021-10-26T22:49:53Z" finished-at="2021-10-26T22:51:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckOutTest -->
+      </class> <!-- frameworkImplemention.CheckOutTestwithTestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

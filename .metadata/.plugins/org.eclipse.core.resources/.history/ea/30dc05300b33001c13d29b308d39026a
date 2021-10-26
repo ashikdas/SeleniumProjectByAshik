@@ -1,0 +1,16 @@
+package frameworkImplemention;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class RegistrationPageObject {
+	
+	private static WebElement locator = null;
+	
+	public static WebElement CreateAccount(WebDriver driver){
+		locator = driver.findElement(By.id("email_create"));
+		return locator;
+	}
+
+}

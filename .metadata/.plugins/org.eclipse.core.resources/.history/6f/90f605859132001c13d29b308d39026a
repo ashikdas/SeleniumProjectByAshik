@@ -1,0 +1,24 @@
+package frameworkImplemention;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class LoginPageTestwithTestNG {
+	
+	public static void main(String[] args) {
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+		
+		LoginPageObject.username(driver).sendKeys("meram56030@omibrown.com");
+		
+		LoginPageObject.password(driver).sendKeys("12345");
+		
+		LoginPageObject.signInButton(driver).click();
+	}
+
+}

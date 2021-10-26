@@ -14,7 +14,7 @@ public class SignInPage {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
-		// Visit homepage
+		// Visit Sign In Page
 		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 		Thread.sleep(3000);
 		

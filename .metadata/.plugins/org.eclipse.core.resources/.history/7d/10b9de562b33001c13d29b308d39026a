@@ -1,0 +1,27 @@
+package frameworkImplemention;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class RegistrationPageTestwithTestNG {
+	static WebDriver driver = null;
+	
+	public static void Setup(){
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+	}
+	
+	public static void RegistrationTest() throws InterruptedException{
+		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+		Thread.sleep(3000);
+		
+		RegistrationPageObject.createAccount(driver).sendKeys("ashik@gmail.com");
+		Thread.sleep(2000);
+		
+		RegistrationPageObject.createAccountButton(driver).click();
+	}
+
+}

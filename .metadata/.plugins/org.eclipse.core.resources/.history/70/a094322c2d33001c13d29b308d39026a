@@ -1,0 +1,57 @@
+package frameworkImplemention;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class RegistrationPageObject {
+	
+	private static WebElement locator = null;
+	
+	public static WebElement createAccount(WebDriver driver){
+		locator = driver.findElement(By.id("email_create"));
+		return locator;
+	}
+	
+	public static WebElement createAccountButton(WebDriver driver){
+		locator = driver.findElement(By.id("SubmitCreate"));
+		return locator;
+	}
+	
+	public static WebElement selectGender(WebDriver driver){
+		locator = driver.findElement(By.xpath("//input[@id='id_gender1']"));
+		return locator;
+	}
+	
+	public static WebElement firstName(WebDriver driver){
+		locator = driver.findElement(By.xpath("//input[@id='customer_firstname']"));
+		return locator;
+	}
+	
+	public static WebElement lastName(WebDriver driver){
+		locator = driver.findElement(By.xpath("//input[@id='customer_lastname']"));
+		return locator;
+	}
+	
+	public static WebElement password(WebDriver driver){
+		locator = driver.findElement(By.id("passwd"));
+		return locator;
+	}
+	
+	public static WebElement day(WebDriver driver){
+		locator = driver.findElement(By.id("days"));
+		return locator;
+	}
+	
+	public static WebElement month(WebDriver driver){
+		locator = driver.findElement(By.id("months"));
+		return locator;
+	}
+	
+	public static WebElement year(WebDriver driver){
+		locator = driver.findElement(By.id("years"));
+		return locator;
+	}
+	
+
+}
